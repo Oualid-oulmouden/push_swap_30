@@ -68,7 +68,7 @@ void		two_sort(t_list *stack);
 int			check_tow_tree(t_list *stack_a);
 
 // parcing
-void		check_alpha(char *str, char  **ar);
+int		check_alpha(char *str, char  **ar);
 int			check_n(t_list *stack, int n);
 void		test_args(char *av[], int ac);
 
