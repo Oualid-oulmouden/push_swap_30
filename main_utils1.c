@@ -34,10 +34,11 @@ int	add_to_stack(t_list **stack, char **ar)
 	i = 0;
 	while (ar[i])
 	{
-		check_alpha(ar[i], ar);
+		if(check_alpha(ar[i], ar))
+			return(free_stack(*stack), 1);
 		tmp = ft_atoi(ar[i]);
 		if (tmp > INT_MAX || INT_MIN > tmp || check_n(*stack, tmp))
-			return (1);
+			return(free_stack(*stack), 1);
 		ft_lstadd_back(stack, ft_lstnew(tmp));
 		i++;
 	}
