@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	check_alpha(char *str, char **ar)
+int	check_alpha(char *str, char **ar)
 {
 	int	i;
 
@@ -25,10 +25,11 @@ void	check_alpha(char *str, char **ar)
 		{
 			write(2, "Error\n", 6);
 			free_memory1(ar);
-			exit(1);
+			return(1);
 		}
 		i++;
 	}
+	return(0);
 }
 
 int	check_n(t_list *stack, int n)
